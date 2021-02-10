@@ -5,7 +5,7 @@
 #include<string>
 using namespace std;
 
-//최대 공약수에 따른다
+//최대 공약수에 따른다.
 int gcd(int a, int b) {
 	if (b == 0)
 		return a;
