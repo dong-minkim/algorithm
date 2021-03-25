@@ -46,6 +46,5 @@ int main()
 		memset(check, 0, sizeof(check));
 		cnt = 0;
 	}
-
 	return 0;
 }
