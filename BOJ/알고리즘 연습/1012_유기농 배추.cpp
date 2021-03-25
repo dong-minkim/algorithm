@@ -1,7 +1,6 @@
 #include<iostream>
 #include<vector>
 #include<cstring>
-
 using namespace std;
 int t;
 int n, m, k;
@@ -10,6 +9,7 @@ int check[51][51] = { 0, };
 int dx[4] = { 0, 0,1,-1 };
 int dy[4] = { 1,-1,0,0 };
 int cnt = 0;
+
 void dfs(int a,int b) {
 	check[a][b] = 1;
 	for (int i = 0; i < 4; i++) {
