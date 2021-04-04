@@ -25,7 +25,6 @@ void Bellman() {
 		}
 	}
 }
-
 int main() {
 
 	int tc;
