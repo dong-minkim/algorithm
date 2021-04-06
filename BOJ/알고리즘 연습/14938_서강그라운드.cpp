@@ -10,21 +10,20 @@ int main()
 	int n, m, r;
 	int t;
 	int a, b, l;
-	int answer;
+	int answer=0;
 
 	cin >> n >> m >> r;
-	cin >> t;
 	for (int i = 0; i < n; i++) {
 		cin >> item[i];
 	}
-	for (int i = 0; i < r; i++) {
+	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < n; j++) {
 			if (i != j) arr[i][j] = 1e9;
 		}
 	}
 	for (int i = 0; i < r; i++) {
 		cin >> a >> b >> l;
-		arr[a][b] = arr[b][a] = l;
+		arr[a-1][b-1] = arr[b-1][a-1] = l;
 	}
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < n; j++) {
@@ -38,7 +37,7 @@ int main()
 	for (int i = 0; i < n; i++) {
 		cnt = item[i];
 		for (int j = 0; j < n; j++) {
-			if (i != j && arr[i][j] <= m) cnt += item[i];
+			if (i!=j && arr[i][j] <= m) cnt += item[j];
 		}
 		answer = max(answer, cnt);
 	}
