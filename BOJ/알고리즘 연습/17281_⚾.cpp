@@ -82,6 +82,7 @@ int play(vector<int>& order) {
 				}
 				else { //È¨·±
 					first_hitter++;
+					score++;
 					for (int i = 3; i >= 1; i--) {
 						if (runner[i] == true) {
 							score++; runner[i] = false;
